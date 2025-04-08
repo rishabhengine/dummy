@@ -8,6 +8,9 @@ on:
 jobs:
   create_branch:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write # If you're creating pull requests
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
